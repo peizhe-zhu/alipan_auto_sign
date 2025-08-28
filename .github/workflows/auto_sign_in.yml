@@ -33,8 +33,8 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Create config file
         run: |
-        echo "refreshToken: ${{ secrets.REFRESH_TOKEN }}" > config.yaml
-        echo "cron: 0 0 8 * * ?" >> config.yaml
+          echo "refreshToken: ${{ secrets.REFRESH_TOKEN }}" > config.yaml
+          echo "cron: 0 0 8 * * ?" >> config.yaml
       - name: auto_sign_in
         run: |
           go build &&
